@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>World Encyclopedia</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>World Encyclopedia</h1>
+      <h2>Discover all the nations and territories that make up the world!</h2>
+    </header>
+    <nav>
+      <input type="search" id="search-bar" placeholder="search" />
+    </nav>
+    <main>
+      <div id="manip-interface">
+        <div id="sort-elements">
+          <p>Sorting Order:</p>
+          <div>
+            <input type="radio" id="sort-ascending" name="sort-order" checked />
+            <label for="sort-ascending">Ascending</label>
+            <input type="radio" id="sort-descending" name="sort-order" />
+            <label for="sort-descending">Descending</label>
+          </div>
+          <div>
+            <label for="sort-by">Sort By:</label>
+            <select id="sort-by">
+              <option value="name">Name</option>
+              <option value="capital">Capital</option>
+              <option value="area">Area</option>
+              <option value="population">Population</option>
+            </select>
+          </div>
+        </div>
+        <div id="filter-elements">
+          <input type="checkbox" id="filter-results" />
+          <label for="filter-results">Filter Results</label>
+          <div id="filter-options">
+            <p>Filter By:</p>
+            <input type="radio" id="filter-by-lang" name="filter-by" checked />
+            <label for="filter-by-lang">Language</label>
+            <input type="radio" id="filter-by-continent" name="filter-by" />
+            <label for="filter-by-continent">Continent</label>
+            <input type="radio" id="filter-by-region" name="filter-by" />
+            <label for="filter-by-region">Region / Subregion</label>
+            <div id="filter-selections">
+              <select id="lang-options"></select>
+              <select id="continent-options" hidden></select>
+              <select id="region-options" hidden></select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="countries"></div>
+      <p id="warning-message" hidden>
+        Sorry, but we couldn't find any results. Try adjusting your search or filters.
+      </p>
+    </main>
+  </body>
+  <script src="js/app.js"></script>
+</html>

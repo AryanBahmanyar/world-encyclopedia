@@ -1,0 +1,188 @@
+@media screen and (max-width: 650px) {
+  #countries {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #card {
+    width: 75vw;
+    min-width: 350px;
+  }
+}
+
+@media screen and (min-width: 651px) and (max-width: 950px) {
+  #countries {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #card {
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 951px) and (max-width: 1200) {
+  #countries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #card {
+    width: 25vw;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  #countries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #card {
+    width: 20vw;
+  }
+}
+
+body,
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+body {
+  background-color: lightskyblue;
+}
+
+header {
+  width: 90vw;
+  background-color: darkslategrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-shadow: 0 0 5px aqua;
+  color: lightcyan;
+  margin: 0.5em;
+}
+
+header > h2 {
+  color: lightseagreen;
+}
+
+nav {
+  width: 90vw;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2em;
+}
+
+nav > button {
+  width: 3%;
+  min-width: 30px;
+  height: 25px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  color: darkgreen;
+  font-size: larger;
+}
+
+nav > button:hover {
+  color: cyan;
+  text-shadow: 0 0 5px blue;
+  cursor: pointer;
+}
+
+nav > input {
+  width: 19%;
+  min-width: 150px;
+  height: 25px;
+}
+
+#manip-interface {
+  background-color: lightgray;
+  border-radius: 5px;
+  width: 50vw;
+  min-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  padding-bottom: 5em;
+  box-shadow: 0 0 10px 2px dimgray;
+}
+
+#sort-elements > div:last-child,
+#filter-results,
+#filter-selections {
+  margin-top: 25px;
+}
+
+hr {
+  margin-top: 2.5em;
+  width: 100%;
+  border: 2px solid cornflowerblue;
+  border-radius: 2px;
+}
+
+#countries {
+  width: 90vw;
+  margin-top: 3em;
+}
+
+#card {
+  background-color: gray;
+  padding: 5px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.75em;
+  transition: transform 1s;
+  box-shadow: 0 0 20px 5px #222222;
+}
+
+#card:hover {
+  transform: scale(1.1);
+}
+
+#card > #name {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+}
+
+#card > img {
+  width: 100%;
+  aspect-ratio: 1.6;
+  margin: 0;
+  user-select: none;
+  padding: 5px 0;
+}
+
+#card > img:hover {
+  cursor: pointer;
+}
+
+#card > #info {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  height: 100%;
+  margin: 0;
+}
+
+#warning-message {
+  color: red;
+  font-size: larger;
+}

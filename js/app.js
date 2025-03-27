@@ -40,8 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
     nav.prepend(button);
   }
   nav.prepend(buttonAll);
-  searchBar.addEventListener("search", displaySearchResults);
-
+  
+  // the "search" event is not standard and does not work on all browsers
+  searchBar.addEventListener("onkeydown", (event) => {
+	  if (event.key === "Enter") {
+		  displaySearchResults();
+	  }
+  });
   // every time the sorting order is changed, an array is created from the children of cardList,
   // which is then reordered and each card gets appended back into cardList; this is so that data
   // isn't fetched and cards aren't recreated every time the sorting order is changed
